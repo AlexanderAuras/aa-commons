@@ -1,0 +1,11 @@
+/.vscode/
+/dist/
+
+/aa-commons-*/dist/
+__pycache__/
+*.egg-info/
+
+/lcov.info
+/.coverage
+/junit.xml
+/.pypirc

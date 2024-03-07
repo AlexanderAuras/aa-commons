@@ -1,0 +1,12 @@
+black~=24.2.0
+build~=1.1.1
+debugpy~=1.8.1
+importlib-metadata~=7.0.1
+isort~=5.13.2
+pip~=24.0
+pyright~=1.1.352
+pytest~=8.0.2
+pytest-cov~=4.1.0
+pytest-xdist~=3.5.0
+setuptools~=68.2.2
+twine~=5.0.0

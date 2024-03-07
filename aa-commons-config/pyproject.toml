@@ -1,0 +1,132 @@
+[project]
+name = "aa-commons-config"
+version = "1.0.0"
+authors = [
+    { name = "Alexander Auras", email = "33501357+AlexanderAuras@users.noreply.github.com" },
+]
+description = "My solutions to common configuration problems encountered during my work."
+readme = "README.md"
+requires-python = ">= 3.12"
+license = { file = "LICENSE" }
+keywords = [
+    "python",
+    "programming",
+    "configuration",
+    "common",
+    "problems",
+]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Operating System :: POSIX",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+    "Typing :: Typed",
+]
+dynamic = ["dependencies", "optional-dependencies"]
+
+#[project.urls]
+#homepage = "https://alexanderauras.github.io/aa_commons"
+#repository = "https://github.com/AlexanderAuras/aa_commons.git"
+#documentation = "https://aa_commons.readthedocs.io/en/latest/"
+#issues = "https://github.com/AlexanderAuras/aa_commons/issues"
+#changelog = "https://github.com/AlexanderAuras/aa_commons/blob/master/CHANGELOG.md"
+
+[build-system]
+requires = ["setuptools~=68.2.2"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+namespaces = true
+
+[tool.setuptools.dynamic]
+dependencies = { file = "requirements.txt" }
+optional-dependencies.dev = { file = "dev-requirements.txt" }
+
+[tool.black]
+line-length = 99999
+include = "src/.*\\.py"
+force-exclude = "\\.git|node_modules|\\.venv|\\.vscode|__pycache__|.egg-info"
+
+[tool.isort]
+profile = "black"
+src_paths = ["src"]
+line_length = 99999
+lines_after_imports = 2
+
+[tool.pyright]
+include = ["src", "tests"]
+exclude = ["**/__pycache__", "**/.egg-info"]
+typeCheckingMode = "strict"
+useLibraryCodeForTypes = true
+analyzeUnannotatedFunctions = true
+enableTypeIgnoreComments = true
+strictDictionaryInference = true
+strictListInference = true
+strictParameterNoneValue = true
+strictSetInference = true
+reportDeprecated = "warning"
+reportAssertAlwaysTrue = "warning"
+reportCallInDefaultInitializer = "warning"
+reportConstantRedefinition = "error"
+reportDuplicateImport = "warning"
+reportFunctionMemberAccess = "none"
+reportGeneralTypeIssues = "error"
+reportImplicitStringConcatenation = "warning"
+reportImportCycles = "error"
+reportIncompatibleMethodOverride = "error"
+reportIncompatibleVariableOverride = "error"
+reportIncompleteStub = "error"
+reportInconsistentConstructor = "error"
+reportInvalidStringEscapeSequence = "error"
+reportInvalidStubStatement = "error"
+reportInvalidTypeVarUse = "error"
+reportMatchNotExhaustive = "error"
+reportMissingImports = "warning"
+reportMissingModuleSource = "information"
+reportMissingParameterType = "error"
+reportMissingSuperCall = "warning"
+reportMissingTypeArgument = "error"
+reportMissingTypeStubs = "information"
+reportOptionalCall = "error"
+reportOptionalContextManager = "error"
+reportOptionalIterable = "error"
+reportOptionalMemberAccess = "error"
+reportOptionalOperand = "error"
+reportOptionalSubscript = "error"
+reportOverlappingOverload = "error"
+reportPrivateImportUsage = "warning"
+reportPrivateUsage = "warning"
+reportPropertyTypeMismatch = "error"
+reportSelfClsParameterName = "error"
+reportShadowedImports = "warning"
+reportTypeCommentUsage = "error"
+reportTypedDictNotRequiredAccess = "error"
+reportUnboundVariable = "error"
+reportUndefinedVariable = "error"
+reportUninitializedInstanceVariable = "error"
+reportUnknownArgumentType = "information"
+reportUnknownLambdaType = "information"
+reportUnknownMemberType = "information"
+reportUnknownParameterType = "information"
+reportUnknownVariableType = "information"
+reportUnnecessaryCast = "warning"
+reportUnnecessaryComparison = "warning"
+reportUnnecessaryContains = "warning"
+reportUnnecessaryIsInstance = "warning"
+reportUnnecessaryTypeIgnoreComment = "warning"
+reportUnsupportedDunderAll = "error"
+reportUntypedBaseClass = "information"
+reportUntypedClassDecorator = "information"
+reportUntypedFunctionDecorator = "information"
+reportUntypedNamedTuple = "information"
+reportUnusedCallResult = "information"
+reportUnusedClass = "information"
+reportUnusedCoroutine = "information"
+reportUnusedExpression = "warning"
+reportUnusedFunction = "information"
+reportUnusedImport = "information"
+reportUnusedVariable = "warning"
+reportWildcardImportFromLibrary = "error"
